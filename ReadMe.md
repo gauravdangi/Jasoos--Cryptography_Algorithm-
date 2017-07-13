@@ -7,10 +7,8 @@ Algorithm:
 1] 24 digit entered/generated key will be converted into ASCII code of 24 digit code.
 
     public void setKey(char[] arr){
-        int j=0;
      for(int i=0;i<24;i++){
-       key[j] = (int)arr[i];
-       j++;
+       key[i] = (int)arr[i];
      } 
     }
 
@@ -56,15 +54,15 @@ That value will be changed into 10 bits binary code.
 
 Similarly, we will do this for each character in the text/string and encrypt it.
 --------------------------------------------------------------------------
-**Examples are provided below**:-
+**Examples are provided below:-
 
-     **Key**: c|H@yLzd3PkRte0H,u16zt8N
+ **Key**: c|H@yLzd3PkRte0H,u16zt8N
 
 **Message**: abcd ef$
 
 **After Encryption**: 110001011111010011111100111001110100000111101100101100010110110010101011011011111100110101110011110011011000001110101101110110111011011110001110010100110111001111011100101110010100
 
 -------------------------------------------------------------------------------
-**Problem**
+**Problem
 
 **Decode this**: 110101101111001000001100100101110011110111011110011100010110110001110011011001011101001000110110100111100000111110010110111100110111110011011111001111111100111111100101011101001101
