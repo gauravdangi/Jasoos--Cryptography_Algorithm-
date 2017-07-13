@@ -16,7 +16,7 @@ class CrypOperations {
     
     // -------------- Creating table ---------------
     
-    // In genral, matrix will be filled with random uniques number from 0 to 1000. But in this case it is simply filled with linear values.
+    // In general , matrix will be filled with random uniques number from 0 to 1000. But in this case it is simply filled with linear values.
     public void create_table(){
     int flag=0;
     for(int i=0;i<32;i++){
@@ -39,12 +39,12 @@ class CrypOperations {
        
         return(String.format("%5s", Integer.toBinaryString(num)).replace(' ', '0'));
     }
-    
+    /*
     // --------- set key2 -----------
     public void setKey2(int a){
     key2 = a;
     }
-   
+   */
     // ----------- check validity of key ----------
     public boolean isValid(char[] v){
      if(v.length == 24)
