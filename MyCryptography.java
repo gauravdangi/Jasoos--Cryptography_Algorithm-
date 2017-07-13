@@ -17,7 +17,7 @@ public class MyCryptography {
         System.out.print("Do you have a key? (Press 1 for YES and 0 for NO)");
         int k = scan.nextInt();
         if(k==1){
-         System.out.print("Enter key! (Should be 24 digits long and separate each digits by space)\n");
+         System.out.print("Enter key! (Should be 24 digits long and avoid spaces)\n");
          char[] kk = new char[24];
          kk = scan.next().toCharArray();
          
