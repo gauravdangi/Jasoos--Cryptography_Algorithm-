@@ -1,7 +1,6 @@
 # Jasoos
 
-I am working on encrypting and decrypt web application. I have built an algorithm that uses a 16 digit key to encrypt/decrypt the message. So I am challenging you to decrypt the message. Review this algorithm and please suggest anything important and fault in this algorithm that can make it perform better. Your contribution can help us to improve our algorithm. 
-You can check out our web application's screenshots [here][1].
+I am working on encrypting and decrypt web application. I have built an algorithm that uses a 24 bits long key to encrypt/decrypt the message. So I am challenging you to decrypt the message given at the end (Using same simple matrix given in code). Review this algorithm and please suggest anything important and fault in this algorithm that can make it perform better. Your contribution can help us to improve our algorithm. 
 
 Algorithm:
 
