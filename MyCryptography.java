@@ -1,5 +1,6 @@
 package mycryptography;
 
+import java.io.IOException;
 import java.util.Scanner;
 
 /*
@@ -8,12 +9,12 @@ import java.util.Scanner;
 public class MyCryptography {
 
     
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException, ClassNotFoundException {
        CrypOperations com = new CrypOperations();
        Scanner scan = new Scanner(System.in);
        char[] key = new char[24];
        System.out.println("Cryptography by Gaurav Dangi\n");
-       com.create_table();
+       com.create_matrix();
         System.out.print("Do you have a key? (Press 1 for YES and 0 for NO)");
         int k = scan.nextInt();
         if(k==1){
@@ -34,6 +35,14 @@ public class MyCryptography {
                for(int i=0;i<24;i++){
                System.out.print(key[i]+" ");}
         }
+        /*
+         System.out.print("\nEnter any 5 random digits\n");
+         int[] num = new int[5];
+         for(int i=0;i<5;i++){
+          num[i] = scan.nextInt();
+         }
+         com.setSUM(num);
+*/
         //System.out.println("Enter your number between (1-100)");
         //com.setKey2(scan.nextInt());
        System.out.print("\nEnter operation\n1]Encryption\n2]Decryption\n-> ");
