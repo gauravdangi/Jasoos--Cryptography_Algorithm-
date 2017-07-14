@@ -14,7 +14,7 @@ Algorithm:
 
 2] Entered String will be changed into a character array.
 
-Every character will be then incremented first with the key’s value and changed into 8-bit binary code.
+Every character will be then incremented first with the key’s value and changed into 10-bit binary code.
 
      public void Encryption(String text){
      char[] msg = text.toCharArray();
@@ -64,7 +64,7 @@ That value will be changed into 10 bits binary code.
     
     }
 
-We will perform this steps ten times with ten different private matrices.
+4] We will perform this steps ten times with ten different private matrices by lookUpTool method.
 
       public String lookUpTool(String s){
    
@@ -93,6 +93,6 @@ Similarly, we will do this for each character in the text/string and encrypt it.
 **After Encryption**: 11001111000001101010000010000101101000001110100000101010111001110000011000001000
 
 -------------------------------------------------------------------------------
-**Problem
+**Problem**
 
-**Decode this** (Message below is encoded using different key): 111000000101110010111001010011100010001100001011111010101110001000000111101010011000100011110100110100011101001110101111111110000011101011001110101101101011000011101000000010001010
+**Decode the encoded code below** (Message below is encoded using different key): 111000000101110010111001010011100010001100001011111010101110001000000111101010011000100011110100110100011101001110101111111110000011101011001110101101101011000011101000000010001010
