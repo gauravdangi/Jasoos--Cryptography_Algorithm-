@@ -16,22 +16,28 @@ Algorithm:
 
 Every character will be then incremented first with the key’s value and changed into 8-bit binary code.
 
-    public void Encryption(String text){
+     public void Encryption(String text){
      char[] msg = text.toCharArray();
      int flag = 0;
      int l = msg.length;
      for(int i=0;i<l;i++){
-       int a = (int)msg[i]; 
-       if(flag>24)
+      int a = (int)msg[i];
+     // System.out.print(msg[i]+" "+a+"-> ");
+      
+     if(flag>23)
          flag=0;
-     int b=a+key[flag];  // Incrementing value
+     int b=a+key[flag];
      flag++;
-     String z = binary(b);  // changed into 10-bit binary code
-     sb.append(lookUp(z));
-          }
+     //System.out.print(b+" | ");
+     String z = binary(b);
+     sb.append(lookUpTool(z));
+     //Character.toString((char)b);
+     }
+     //sb.append(sumBinary);
+     sb = comp1(sb);
     }
 
-3] looUp():- It will take 10 bit string as input and divide that string into two 5 bit binary code.
+3] looUp():- It will take 10 bit string as input and a matrix, and divide that string into two 5 bit binary code.
 
 We will then calculate decimal value of each 5-bit binary code.
 
@@ -42,15 +48,39 @@ We have a matrix of 32 X 32 dimensions which unique random values from 1 to 1000
 For 0011101101 we will look for 7th row and 13th column value.
 That value will be changed into 10 bits binary code.
 
-    public String lookUp(String bits){
-      int mid = Math.round((float) bits.length() / 2);
-      String part1 = bits.substring(0, mid);
-      String part2 = bits.substring(mid, bits.length());
-      int row=binaryValue(part1);
-      int col=binaryValue(part2);
-      int a = matrix[row][col];
-      return binary(a);
-  }
+    public String lookUp(String bits, int[][] mat){
+    
+    int mid = Math.round((float) bits.length() / 2);
+    String part1 = bits.substring(0, mid);
+    String part2 = bits.substring(mid, bits.length());
+    int row=binaryValue(part1);
+    int col=binaryValue(part2);;
+    
+   
+    //System.out.print("row: "+row);
+    // System.out.println("|| col: "+col);
+    int a = mat[row][col];
+    return binary(a);
+    
+    }
+
+We will perform this steps ten times with ten different private matrices.
+
+      public String lookUpTool(String s){
+   
+       String s1 = lookUp(s,matrix1);
+       String s2 = lookUp(s1,matrix2);
+       String s3 = lookUp(s2,matrix3);
+       String s4 = lookUp(s3,matrix4);
+       String s5 = lookUp(s4,matrix5);
+       String s6 = lookUp(s5,matrix6);
+       String s7 = lookUp(s6,matrix7);
+       String s8 = lookUp(s7,matrix8);
+       String s9 = lookUp(s8,matrix9);
+       String s10 = lookUp(s9,matrix10);
+       
+       return s10;
+   }
 
 Similarly, we will do this for each character in the text/string and encrypt it.
 --------------------------------------------------------------------------
@@ -60,9 +90,9 @@ Similarly, we will do this for each character in the text/string and encrypt it.
 
 **Message**: abcd ef$
 
-**After Encryption**: 110001011111010011111100111001110100000111101100101100010110110010101011011011111100110101110011110011011000001110101101110110111011011110001110010100110111001111011100101110010100
+**After Encryption**: 11001111000001101010000010000101101000001110100000101010111001110000011000001000
 
 -------------------------------------------------------------------------------
 **Problem
 
-**Decode this**: 110101101111001000001100100101110011110111011110011100010110110001110011011001011101001000110110100111100000111110010110111100110111110011011111001111111100111111100101011101001101
+**Decode this** (Message below is encoded using different key): 111000000101110010111001010011100010001100001011111010101110001000000111101010011000100011110100110100011101001110101111111110000011101011001110101101101011000011101000000010001010
