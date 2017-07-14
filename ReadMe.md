@@ -80,7 +80,7 @@ We will perform this steps ten times with ten different private matrices.
        String s10 = lookUp(s9,matrix10);
        
        return s10;
-   }
+    }
 
 Similarly, we will do this for each character in the text/string and encrypt it.
 --------------------------------------------------------------------------
