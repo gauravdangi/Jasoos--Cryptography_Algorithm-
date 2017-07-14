@@ -37,13 +37,13 @@ Every character will be then incremented first with the key’s value and change
      sb = comp1(sb);
     }
 
-3] looUp():- It will take 10 bit string as input and a matrix, and divide that string into two 5 bit binary code.
+3] looUp():-  It will take a 10-bit string as input and a matrix, and divide that string into two 5 bit binary code.
 
 We will then calculate decimal value of each 5-bit binary code.
 
 **Example**: 0011101101 -> 00111 = 7 and 01101 = 13
 
-We have a matrix of 32 X 32 dimensions which unique random values from 1 to 1000 and will not be shared publicly. 
+We have a matrix of 32 X 32 dimensions which has unique random values from 0 to 1023 and will not be shared publicly. 
 
 For 0011101101 we will look for 7th row and 13th column value.
 That value will be changed into 10 bits binary code.
