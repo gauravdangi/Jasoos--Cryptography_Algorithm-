@@ -24,18 +24,14 @@ Every character will be then incremented first with the key’s value and change
      int l = msg.length;
      for(int i=0;i<l;i++){
       int a = (int)msg[i];
-     // System.out.print(msg[i]+" "+a+"-> ");
       
      if(flag>23)
          flag=0;
      int b=a+key[flag];
      flag++;
-     //System.out.print(b+" | ");
      String z = binary(b);
      sb.append(lookUpTool(z));
-     //Character.toString((char)b);
      }
-     //sb.append(sumBinary);
      sb = comp1(sb);
     }
 
